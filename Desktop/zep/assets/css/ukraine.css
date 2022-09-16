@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.positionCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal{
+    background-image: url(/assets/images/ukraine/pattern.png);
+    width: 500px;
+    height: 300px;
+    flex-direction: column;
+}
+
+.popupText{
+    margin-bottom: 15px;
+    text-align: center;
+    color: #0072b0;
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.popupButton{
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    background-color: #0072b0;
+    border-style: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 45%;
+    height: 60px;
+}
+
+.popupButton:hover{
+    background-color: #008DD7;
+    transition: all .5s;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgbox {
+    background-image: url(/assets/images/ukraine/pattern.png);
+    height: 600px;
+    width: 600px;
+    display: none;
+}
+
+.wrap {
+    background-color: #008DD7;
+    border-radius: 15px;
+    width: 370px;
+    box-shadow: 0 0px 5px rgb(0 0 0 / 50%);
+}
+
+.box {
+    border-radius: 8.5px;
+    box-shadow: 0 0px 4px rgb(0 0 0 / 20%);
+    padding: 5px 0;
+}
+
+.box-top {
+    background: linear-gradient(rgba(243, 204, 32, 0), 90%, rgba(247, 181, 44, 0.5) 95%, rgba(238, 176, 36, 1));
+    background-color: #F3E4BE;
+    border-radius: 8.5px 8.5px 0 0;
+    width: 350px;
+    height: 210px;
+    margin: 0 auto;
+}
+
+.box-top>img {
+    width: 210px;
+    text-align: center;
+}
+
+.box-bottom {
+    border-radius: 0 0 8.5px 8.5px;
+    background: linear-gradient(#dad5b6, 2%, #FFFCE6 5%);
+    margin: 0 auto;
+    width: 350px;
+    height: 210px;
+    padding: 10px 20px;
+}
+
+.box-bottom .context-title {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(247, 181, 44);
+}
+
+.inner-box-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.line {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    border-style: solid;
+    border-width: 1px;
+    color: rgb(247, 181, 44);
+    size: 10px
+}
+
+.inner-box-left {
+    position: relative;
+}
+
+.inner-box-left #profile {
+    border-radius: 10px;
+    border: 4px solid rgb(247, 181, 44);
+    background-color: rgba(251, 204, 43, 0.5);
+    height: 130px;
+    width: 130px;
+}
+
+.inner-box-left .stamp {
+    position: absolute;
+    z-index: 10;
+    width: 70px;
+    height: 70px;
+    right: -20px;
+    bottom: -10px;
+    transform: rotate(-20deg);
+}
+
+.inner-box-contents{
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 2px;
+    color: rgb(247, 181, 44);
+}
+
+.input-text{
+    height: 24px;
+    border-bottom: 2px solid rgb(247, 181, 44);
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.inner-box-right{
+    width: 51%;
+}
+
+.inform-text{
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+    color: #0072b0;
+    font-size: 22px;
+    font-weight: 700;
+}
