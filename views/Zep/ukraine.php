@@ -32,7 +32,7 @@
                     <div class="inner-box-bottom">
                         <div class="inner-box-left">
                             <img src="<?=$skin?>" id="profile">
-                            <img src="/assets/images/ukraine/stamp.png" class="stamp">
+                            <img src="/assets/images/ukraine/stamp.svg" class="stamp">
                         </div>
                         <div class="inner-box-right">
                             <div class="inner-box-contents">
@@ -57,5 +57,3 @@
             <p>Please Support Ukraine's Return to Daily Life!</p>
         </div>
     </div>
-
-    <!-- <?=$skin?> -->
