@@ -39,7 +39,7 @@ class Zep extends DEVWORKS_Controller {
         $view['link'] = "https://".$_SERVER['HTTP_HOST'].$request_uri."&mode=mobile";
 
         $skinNum = $this->input->get_post('sprite');
-        $view['skin'] = "/assets/images/skin".$skinNum.".png";
+        $view['skin'] = "/assets/images/sprite".$skinNum.".png";
         
         $this->data = $view;
         $this->layout = "/Zep/layout_ukraine";
