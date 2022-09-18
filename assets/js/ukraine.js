@@ -12,8 +12,7 @@ window.onload = function () { // 화면이 로드될시에 쿼리 값을 갖고 
     document.querySelector(".no-value").textContent = no;
 }
 
-const submit = document.querySelector('.popupButton');
-const modal = document.querySelector('.modal');
+const submit = document.querySelector('.btnDownload');
 const imgbox = document.querySelector('.imgbox');
 
 submit.addEventListener('click', function () {
@@ -22,12 +21,10 @@ submit.addEventListener('click', function () {
     // 2. html2canvas 라이브러리를 이용해 파일을 다운로드
     // 3. 다시 화면에서 안보이도록 하여 사용자 입장에서는 이미지만 다운로드 함
     document.querySelector('.imgbox').style.display = 'flex';
-
     html2canvas(imgbox)
         .then(canvas => { saveAs(canvas.toDataURL('image/png'), `${name}.png`); });
     // canvas 오브젝트를 받고 이미지 파일로 리턴한다.
-
-    // document.querySelector('.imgbox').style.display = 'none';
+    document.querySelector('.imgbox').style.display = 'none';
 })
 
 function saveAs(uri, filename) {

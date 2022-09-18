@@ -7,9 +7,15 @@
             <p>Please get a 'Support Pass'</p>
             <p>to support Ukraine and share it on SNS!</p>
         </div>
-        <button class="popupButton">
+        <button class="btnDownload">
             <p>서포트 패스 발급</p>
             <p>Get a Surpport Pass</p>
+        </button>
+        <button class="btnShare">
+
+        </button>
+        <button class="btnLink">
+            
         </button>
     </div>
 

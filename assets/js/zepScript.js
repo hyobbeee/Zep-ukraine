@@ -1,4 +1,4 @@
-$(function () {
+$(function () { // $(document).ready(function(){}) == document.onload()
     let _name = document.querySelector(".name");
     _name.innerText = getParam("name");
 
