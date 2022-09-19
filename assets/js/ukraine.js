@@ -11,13 +11,9 @@ window.onload = function () { // 화면이 로드될시에 쿼리 값을 갖고 
     document.querySelector(".date-value").textContent = date;
     document.querySelector(".no-value").textContent = no;
 
+    // 접속자 이름 출력
     let _name = document.querySelector(".name");
     _name.innerText = getParam("name");
-
-    const _mode = getParam("mode");
-    if (_mode == "mobile") {
-        downloadImage();
-    }
 
     // 기기 종류에 따라 다른 버튼 출력
     if (isMobile() && navigator.userAgent.match(/ZepApp|KAKAO|Instagram|NAVER/i)) {
@@ -59,9 +55,13 @@ function downloadImage() {
     // 2. html2canvas 라이브러리를 이용해 파일을 다운로드
     // 3. 다시 화면에서 안보이도록 하여 사용자 입장에서는 이미지만 다운로드 함
     document.querySelector('.imgbox').style.display = 'flex';
+
     html2canvas(imgbox)
-        .then(canvas => { saveAs(canvas.toDataURL('image/png'), `${name}.png`); });
+        .then(canvas => {
+            saveAs(canvas.toDataURL('image/png'), `${name}.png`);
+        });
     // toDataURL() = canvas 오브젝트를 받고 이미지 파일 + 이름으로 리턴한다.
+
     document.querySelector('.imgbox').style.display = 'none';
 }
 
@@ -96,14 +96,34 @@ function urlShare(_shareUrl) {
 }
 
 // url파라미터 추출
+
+function getParam(key) {
+
+    var params = location.search.substring(location.search.indexOf("?") + 1);
+    // 주소창의 ? 다음(+1)부터 추출한 값
+    var parammap = "";
+    params = params.split("&"); // &를 기준으로 잘라냄
+    for (var i = 0; i < params.length; i++) { // 파라미터의 갯수만큼 반복문 돌림
+        splitedParams = params[i].split("=");
+        // &를 기준으로 잘라낸 파라미터들을 다시 =을 기준으로 잘라냄
+        if ([splitedParams[0]] == key) { parammap = splitedParams[1]; }
+        // 잘려진파라미터의 첫번째 글자와 키가 같다면 두번째값(결과값)을 parammap에 할당
+    }
+
+    return parammap;
+}
+
+/*
 function getParam(key) {
     const _parammap = {};
     document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
         const decode = function (s) {
             return decodeURIComponent(s.split("+").join(" "));
         }
-        _parammap[decode(arguments[1])] = decode(arguments[2]);
+        _parammap[decode(arguments[1])] = decode(arguments[2]); // 
+        console.log(_parammap);
     });
 
     return _parammap[key];
-}
+} 
+*/
