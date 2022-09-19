@@ -26,17 +26,22 @@
     font-weight: 750;
 }
 
-.btnDownload {
+.btnStyle{
+    display: none;
     color: #ffffff;
     text-align: center;
     font-weight: 500;
     font-size: 15px;
-    background-color: #0072b0;
     border-style: none;
     border-radius: 8px;
     cursor: pointer;
-    width: 45%;
+    width: 160px;
     height: 60px;
+    padding-top: 10px;
+}
+
+.btnDownload {
+    background-color: #0072b0;
 }
 
 .btnDownload:hover {
@@ -44,9 +49,18 @@
     transition: all .5s;
 }
 
-.btnShare {}
+.btnShare {
+    background-color: lightgreen;
+}
 
-.btnLink {}
+.btnLink {
+    background-color: lightcoral;
+}
+
+#btnRegist {
+    border: none;
+    background: none;
+}
 
 .flexCenter {
     display: flex;

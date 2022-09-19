@@ -1,5 +1,6 @@
     <div class="modal flexCenter positionCenter">
         <div class="popupText">
+            <span class="name">test</span><span>님!</span>
             <p>우크라이나를 응원하는</p>
             <p>서포트 패스를 발급받고 SNS에 공유해주세요!</p>
         </div>
@@ -7,16 +8,18 @@
             <p>Please get a 'Support Pass'</p>
             <p>to support Ukraine and share it on SNS!</p>
         </div>
-        <button class="btnDownload">
+        <div class="btnDownload btnStyle">
             <p>서포트 패스 발급</p>
             <p>Get a Surpport Pass</p>
-        </button>
-        <button class="btnShare">
-
-        </button>
-        <button class="btnLink">
-            
-        </button>
+        </div>
+        <div class="btnShare btnStyle"> <!-- 아이폰 -->
+            <p>서포트 패스 발급</p>
+            <p>Get a Surpport Pass</p>
+        </div>
+        <div class="btnLink btnStyle"> <!-- 안드로이드폰 -->
+            <p>서포트 패스 발급</p>
+            <p>Get a Surpport Pass</p>
+        </div>
     </div>
 
     <div class="imgbox flexCenter" style="flex-direction: column;">
