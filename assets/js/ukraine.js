@@ -37,7 +37,7 @@ window.onload = function () { // 화면이 로드될시에 쿼리 값을 갖고 
     document.querySelector('.btnShare').addEventListener('click', function (event) {
         event.stopImmediatePropagation();
         alert("크롬또는 사파리 브라우저에서 열어주세요.");
-        urlShare(location.href + "&mode=mobile");
+        urlShare(location.href); //  + "&mode=mobile" 모바일접속시 이미 있음?
     });
 }
 

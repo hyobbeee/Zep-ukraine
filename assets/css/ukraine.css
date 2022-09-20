@@ -1,5 +1,8 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css");
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css");
+
+
 * {
     margin: 0;
     padding: 0;
@@ -72,6 +75,7 @@
     width:1080px;
     height:1080px;
     background-image: url(/assets/images/ukraine/imgBoxBG.png);
+    overflow: hidden;
 }
 
 #profile{
@@ -84,6 +88,7 @@
 
 .texts {
     font-size: 28px;
+    font-weight: 500;
     color: #21211d;
 
     position: absolute;
@@ -92,13 +97,17 @@
 
 #name {
     top: 606px;
+    white-space: nowrap;
 }
+
 #regDate {
     top: 689px;
 }
+
 #regNumber {
     top: 772px;
 }
+
 #stamp {
     position: absolute;
     left: 400px;
