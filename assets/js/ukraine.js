@@ -82,7 +82,7 @@ function urlShare(_shareUrl) {
     const _shareTitle = "[타이틀] 공유하기 기능 테스트 중입니다.";
     const _shareText = "[텍스트] 공유하기 기능 테스트 중입니다.";
 
-    if (navigator.share) {
+    if (navigator.share) { // web API임 
         navigator.share({
             title: _shareTitle,
             text: _shareText,
@@ -95,8 +95,7 @@ function urlShare(_shareUrl) {
     }
 }
 
-// url파라미터 추출
-
+// url파라미터 추출 함수
 function getParam(key) {
 
     var params = location.search.substring(location.search.indexOf("?") + 1);
