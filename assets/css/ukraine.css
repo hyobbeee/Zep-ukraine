@@ -1,6 +1,10 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css");
+
 * {
     margin: 0;
     padding: 0;
+    font-family: Pretendard;
+    letter-spacing: -0.02em;
     box-sizing: border-box;
 }
 
@@ -57,18 +61,56 @@
     background-color: lightcoral;
 }
 
-#btnRegist {
-    border: none;
-    background: none;
-}
-
 .flexCenter {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.imgbox {
+#imgbox{
+    display: none;
+    width:1080px;
+    height:1080px;
+    background-image: url(/assets/images/ukraine/imgBoxBG.png);
+}
+
+#profile{
+    position: relative; 
+    top:583px; 
+    left:259px; 
+    width:224px; 
+    height:224px;
+}
+
+.texts {
+    font-size: 28px;
+    color: #21211d;
+
+    position: absolute;
+    left: 512px;
+}
+
+#name {
+    top: 606px;
+}
+#regDate {
+    top: 689px;
+}
+#regNumber {
+    top: 772px;
+}
+#stamp {
+    position: absolute;
+    left: 400px;
+    top: 720px;
+    width: 110px;
+    height: 110px;
+    opacity: 0.94;
+    mix-blend-mode: multiply;
+    transform: rotate(-20deg);
+}
+
+/* .imgbox {
     background-image: url(/assets/images/ukraine/pattern.png);
     height: 600px;
     width: 600px;
@@ -184,4 +226,4 @@
     color: #0072b0;
     font-size: 22px;
     font-weight: 700;
-}
+} */

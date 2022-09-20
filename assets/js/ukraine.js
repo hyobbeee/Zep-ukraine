@@ -47,14 +47,14 @@ function isMobile() {
 }
 
 const submit = document.querySelector('.btnDownload');
-const imgbox = document.querySelector('.imgbox');
+const imgbox = document.querySelector('#imgbox');
 
 function downloadImage() {
     // 서포트패스 발급 버튼을 누를 시에 동작
     // 1. 이름과 날짜와 번호가 들어간 파일을 화면에 렌더링
     // 2. html2canvas 라이브러리를 이용해 파일을 다운로드
     // 3. 다시 화면에서 안보이도록 하여 사용자 입장에서는 이미지만 다운로드 함
-    document.querySelector('.imgbox').style.display = 'flex';
+    document.querySelector('#imgbox').style.display = 'flex';
 
     html2canvas(imgbox)
         .then(canvas => {
@@ -62,7 +62,7 @@ function downloadImage() {
         });
     // toDataURL() = canvas 오브젝트를 받고 이미지 파일 + 이름으로 리턴한다.
 
-    document.querySelector('.imgbox').style.display = 'none';
+    document.querySelector('#imgbox').style.display = 'none';
 }
 
 function saveAs(uri, filename) {
@@ -95,6 +95,7 @@ function urlShare(_shareUrl) {
     }
 }
 
+/* 
 // url파라미터 추출 함수
 function getParam(key) {
 
@@ -110,19 +111,19 @@ function getParam(key) {
     }
 
     return parammap;
-}
+} */
 
-/*
 function getParam(key) {
     const _parammap = {};
     document.location.search.replace(/\??(?:([^=]+)=([^&]*)&?)/g, function () {
-        const decode = function (s) {
-            return decodeURIComponent(s.split("+").join(" "));
+        // /g = 문자열 내의 모든 패턴을 검색 / =, & 제외한 다음 문자부터 그룹핑(?:)된 문자패턴 + ? 한개까지
+        const decode = function (string) {
+            return decodeURIComponent(string.split("+").join(" "));
+            // 인코딩된 uri값을 +를 기준으로 배열로 나눈뒤 ''으로 다시 문자로 합침 
         }
-        _parammap[decode(arguments[1])] = decode(arguments[2]); // 
-        console.log(_parammap);
+        _parammap[decode(arguments[1])] = decode(arguments[2]);
+        // 잘려진파라미터의 첫번째 글자와 키가 같다면 두번째값(결과값)을 parammap에 할당
     });
 
     return _parammap[key];
 } 
-*/

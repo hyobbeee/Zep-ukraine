@@ -22,7 +22,15 @@
         </div>
     </div>
 
-    <div class="imgbox flexCenter" style="flex-direction: column;">
+    <div id="imgbox">
+        <img id="profile" src="<?=$skin?>">
+        <div class="texts name-value" id="name">NAME</div>
+        <div class="texts date-value" id="regDate">regDate</div>
+        <div class="texts no-value" id="regNumber">regNumber</div>
+        <img id="stamp" src="/assets/images/ukraine/stamp.png">
+    </div>
+    
+    <!-- <div class="imgbox flexCenter" style="flex-direction: column;">
         <div class="wrap">
             <div class="box">
                 <div class="box-top flexCenter">
@@ -65,4 +73,4 @@
             <p>우크라이나의 일상 회복을 응원해주세요!</p>
             <p>Please Support Ukraine's Return to Daily Life!</p>
         </div>
-    </div>
+    </div> -->
