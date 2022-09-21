@@ -15,6 +15,12 @@ window.onload = function () { // 화면이 로드될시에 쿼리 값을 갖고 
     let _name = document.querySelector(".name");
     _name.innerText = getParam("name");
 
+    // 모바일 접속시 다운로드
+    const _mode = getParam("mode");
+    if (_mode == "mobile") {
+        downloadImage();
+    }
+
     // 기기 종류에 따라 다른 버튼 출력
     if (isMobile() && navigator.userAgent.match(/ZepApp|KAKAO|Instagram|NAVER/i)) {
         // navigator.userAgent : 사용중인 단말정보
@@ -37,7 +43,7 @@ window.onload = function () { // 화면이 로드될시에 쿼리 값을 갖고 
     document.querySelector('.btnShare').addEventListener('click', function (event) {
         event.stopImmediatePropagation();
         alert("크롬또는 사파리 브라우저에서 열어주세요.");
-        urlShare(location.href); //  + "&mode=mobile" 모바일접속시 이미 있음?
+        urlShare(location.href + "&mode=mobile"); //  + "&mode=mobile" 모바일접속시 이미 있음?
     });
 }
 

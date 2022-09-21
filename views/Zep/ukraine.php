@@ -16,10 +16,10 @@
             <p>서포트 패스 발급</p>
             <p>Get a Surpport Pass</p>
         </div>
-        <div class="btnLink btnStyle"> <!-- 안드로이드폰 -->
+        <a href="<?=$link?>" target="_blank" class="btnLink btnStyle"> <!-- 안드로이드폰 -->
             <p>서포트 패스 발급</p>
             <p>Get a Surpport Pass</p>
-        </div>
+        </a>
     </div>
 
     <div id="imgbox">
